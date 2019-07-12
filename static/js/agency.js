@@ -54,6 +54,7 @@ $('form[id=contactForm]').submit(function(){
     if (jqXHR.status == 200) {
       $('form[id=contactForm] #success').show();
     }}, 'json').fail(function(){
+      alert(jqXHR.status);
       $('form[id=contactForm] #success').hide();
       $('form[id=contactForm] #error').hide();
       $('form[id=contactForm] #error').show();
